@@ -1,0 +1,80 @@
+<html>
+<header> Song - Assignment 5 </header>
+<body>
+  <h1 name="h1"></h1>
+    <h2 name="h2"></h2>
+      <div id="divtag" name="div">
+        <p id="field">
+        </p>
+      </div>
+      <style>
+      button1 {
+      image:https://upload.wikimedia.org/wikipedia/en/2/2a/JamesPleasedToMeetYou.jpg;
+     }
+      button2 {
+       image:https://upload.wikimedia.org/wikipedia/en/1/17/Hooverphonic-Blue_Wonder_Power_Milk.jpg;
+     }
+      button3 {
+       image:https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png
+     }
+     </style>
+  <script language javascript>
+    let songs = [
+  {
+    title: "Getting Away with It (All Messed Up)",
+    artist: "James",
+    album: "Pleased to Meet You",
+    year: 2001,
+    art: "https://upload.wikimedia.org/wikipedia/en/2/2a/JamesPleasedToMeetYou.jpg"
+  },
+  {
+    title: "Renaissance Affair",
+    artist: "Hooverphonic",
+    album: "Blue Wonder Power Milk",
+    year: 1998,
+    art: "https://upload.wikimedia.org/wikipedia/en/1/17/Hooverphonic-Blue_Wonder_Power_Milk.jpg"
+  },
+  {
+    title: "White Nights",
+    artist: "Oh Land",
+    album: "Oh Land",
+    year: 2011,
+    art: "https://upload.wikimedia.org/wikipedia/en/6/68/Oh_Land_%28album%29.png"
+  }
+]
+console.log(songs[1].art);
+console.log(songs[1]);
+
+songs.forEach(function(song){
+  console.log(song.art);
+  let art_1 = document.createElement("img");
+  art_1.src = song.art
+  art_1.addEventListener('click', function() {displaySongInfo(song)});
+  myNewPage = document.getElementById('field');
+  myNewPage.appendChild(art_1);
+});
+  function displaySongInfo(song){
+    console.log(song);
+  }
+  button1.addEventListener('click', function(){
+    button1_display.innerHTML = song.title
+  });
+
+songs.forEach(function(song){
+  console.log(song.title);
+  let title_1 = document.createElement("title");
+  title_1.src = song.title
+  title_1.addEventListener('click', function() {displaySongInfo(song)});
+  myNewPage = document.getElementById('field');
+  myNewPage.appendChild(title_1);
+});
+function displaySongInfo(song){
+  console.log(song);
+}
+button1.addEventListener('click', function(){
+  button1_display.innerHTML = song.title
+});
+
+</script>
+
+</html>
